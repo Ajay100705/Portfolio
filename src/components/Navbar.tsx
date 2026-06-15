@@ -8,7 +8,6 @@ const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
-  // { label: 'Cloud & DevOps', href: '#clouddevops' },
   { label: 'Projects', href: '#projects' },
   { label: 'Experience', href: '#experience' },
   { label: 'Certifications', href: '#certifications' },
