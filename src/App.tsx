@@ -4,7 +4,6 @@ import { ScrollToTop } from '@/components/ScrollToTop';
 import { HeroSection } from '@/sections/HeroSection';
 import { AboutSection } from '@/sections/AboutSection';
 import { SkillsSection } from '@/sections/SkillsSection';
-// import { CloudDevopsSection } from '@/sections/CloudDevopsSection';
 import { ProjectsSection } from '@/sections/ProjectsSection';
 import { ExperienceSection } from '@/sections/ExperienceSection';
 import { CertificationsSection } from '@/sections/CertificationsSection';
@@ -20,7 +19,6 @@ export default function App() {
         <HeroSection />
         <AboutSection />
         <SkillsSection />
-        {/* <CloudDevopsSection /> */}
         <ProjectsSection />
         <ExperienceSection />
         <CertificationsSection />
