@@ -1,18 +1,20 @@
-import { motion } from 'framer-motion';
-import { useMemo } from 'react';
-import { ChevronDown, Download, Mail, Github, Linkedin } from 'lucide-react';
-import { useTypingAnimation } from '@/hooks/useTypingAnimation';
-import { GradientButton } from '@/components/GradientButton';
-import { FloatingParticles } from '@/components/FloatingParticles';
-
+import { motion } from "framer-motion";
+import { useMemo } from "react";
+import { ChevronDown, Download, Mail, Github, Linkedin } from "lucide-react";
+import { useTypingAnimation } from "@/hooks/useTypingAnimation";
+import { GradientButton } from "@/components/GradientButton";
+import { FloatingParticles } from "@/components/FloatingParticles";
 
 export function HeroSection() {
-  const phrases = useMemo(() => [
-    'Backend Developer',
-    'Django REST Framework Developer',
-    'DevOps Enthusiast',
-    'AWS Cloud Learner',
-  ], [] );
+  const phrases = useMemo(
+    () => [
+      "Backend Developer",
+      "Django REST Framework Developer",
+      "AWS Cloud Enthusiast",
+      "DevOps Learner",
+    ],
+    [],
+  );
 
   const { displayText } = useTypingAnimation({
     phrases,
@@ -24,7 +26,11 @@ export function HeroSection() {
 
   const handleScrollTo = (id: string) => {
     const el = document.querySelector(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleResumeDownload = () => {
+    window.open("/resume/Ajay-Pratap-Singh-Chandel-Resume.pdf", "_blank");
   };
 
   return (
@@ -40,33 +46,37 @@ export function HeroSection() {
         <div
           className="absolute -top-[200px] -left-[200px] w-[600px] h-[600px] rounded-full animate-float"
           style={{
-            background: 'radial-gradient(circle, rgba(212,154,58,0.15), transparent 70%)',
+            background:
+              "radial-gradient(circle, rgba(212,154,58,0.15), transparent 70%)",
           }}
         />
         <div
           className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full animate-float"
           style={{
-            background: 'radial-gradient(circle, rgba(212,87,58,0.12), transparent 70%)',
-            animationDelay: '-10s',
+            background:
+              "radial-gradient(circle, rgba(212,87,58,0.12), transparent 70%)",
+            animationDelay: "-10s",
           }}
         />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center text-center max-w-[800px] mx-auto px-6 pt-20">
+      <div className="relative z-10 flex flex-col items-center text-center max-w-[900px] mx-auto px-6 pt-16">
         {/* Profile Image */}
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           className="mb-8"
+          whileHover={{ scale: 1.05 }}
         >
           <div
             className="w-[120px] h-[120px] md:w-[180px] md:h-[180px] rounded-full overflow-hidden"
             style={{
-              border: '4px solid transparent',
-              background: 'linear-gradient(#0A0A0A, #0A0A0A) padding-box, linear-gradient(135deg, #D49A3A, #D4573A) border-box',
-              boxShadow: '0 0 60px rgba(212, 154, 58, 0.2)',
+              border: "4px solid transparent",
+              background:
+                "linear-gradient(#0A0A0A, #0A0A0A) padding-box, linear-gradient(135deg, #D49A3A, #D4573A) border-box",
+              boxShadow: "0 0 60px rgba(212, 154, 58, 0.2)",
             }}
           >
             <img
@@ -82,7 +92,7 @@ export function HeroSection() {
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-4xl md:text-7xl font-bold text-white tracking-tight"
+          className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight"
         >
           Ajay Pratap Singh Chandel
         </motion.h1>
@@ -110,9 +120,20 @@ export function HeroSection() {
             <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
           </span>
           <span className="text-sm font-medium text-emerald-400">
-            Available for Internships
+            Open to Backend, Cloud & DevOps Opportunities
           </span>
         </motion.div>
+
+        {/* Value Proposition */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2 }}
+          className="mt-3 text-sm md:text-base text-white/70"
+        >
+          Building scalable backend systems with Python, Django, REST APIs, AWS,
+          and modern DevOps practices.
+        </motion.p>
 
         {/* Introduction */}
         <motion.p
@@ -121,9 +142,10 @@ export function HeroSection() {
           transition={{ duration: 0.6, delay: 1.4, ease: [0.16, 1, 0.3, 1] }}
           className="mt-6 text-base text-[#8A8A8A] max-w-[600px] leading-relaxed"
         >
-          Backend Developer specializing in Python, Django, and REST APIs.
-          Currently building hands-on expertise in cloud infrastructure, Docker containerization,
-          and DevOps workflows. Focused on writing clean, scalable code and automating deployment pipelines.
+          Backend Developer focused on building scalable web applications using
+          Python, Django, and REST APIs. Currently exploring AWS, Docker, and
+          DevOps practices while developing production-ready projects and
+          deployment workflows.
         </motion.p>
 
         {/* Social Buttons */}
@@ -134,9 +156,21 @@ export function HeroSection() {
           className="mt-8 flex items-center gap-3"
         >
           {[
-            { icon: Github, href: 'https://github.com/Ajay100705', label: 'GitHub' },
-            { icon: Linkedin, href: 'https://linkedin.com/in/ajaychandel', label: 'LinkedIn' },
-            { icon: Mail, href: 'mailto:chandelajay2812@gmail.com', label: 'Email' },
+            {
+              icon: Github,
+              href: "https://github.com/Ajay100705",
+              label: "GitHub",
+            },
+            {
+              icon: Linkedin,
+              href: "https://www.linkedin.com/in/ajay-chandel-dev",
+              label: "LinkedIn",
+            },
+            {
+              icon: Mail,
+              href: "mailto:chandelajay2812@gmail.com",
+              label: "Email",
+            },
           ].map((social) => (
             <motion.a
               key={social.label}
@@ -162,11 +196,11 @@ export function HeroSection() {
         >
           <GradientButton
             icon={ChevronDown}
-            onClick={() => handleScrollTo('#projects')}
+            onClick={() => handleScrollTo("#projects")}
           >
             View Projects
           </GradientButton>
-          <GradientButton variant="outline" icon={Download} iconPosition="left">
+          <GradientButton variant="outline" icon={Download} iconPosition="left" onClick={handleResumeDownload}>
             Download Resume
           </GradientButton>
         </motion.div>
