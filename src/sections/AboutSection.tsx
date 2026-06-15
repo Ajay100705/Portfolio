@@ -1,11 +1,26 @@
-import { useRef, useEffect, useState } from 'react';
-import { motion, useInView, animate } from 'framer-motion';
-import { GraduationCap, Target, Cloud, Server, Code2, BookOpen } from 'lucide-react';
-import { SectionHeader } from '@/components/SectionHeader';
+import { useRef, useEffect, useState } from "react";
+import { motion, useInView, animate } from "framer-motion";
+import {
+  GraduationCap,
+  Target,
+  Cloud,
+  Server,
+  Code2,
+  BookOpen,
+} from "lucide-react";
+import { SectionHeader } from "@/components/SectionHeader";
 
-function StatCounter({ target, suffix, label }: { target: number; suffix: string; label: string }) {
+function StatCounter({
+  target,
+  suffix,
+  label,
+}: {
+  target: number;
+  suffix: string;
+  label: string;
+}) {
   const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-80px' });
+  const isInView = useInView(ref, { once: true, margin: "-80px" });
   const [display, setDisplay] = useState(0);
 
   useEffect(() => {
@@ -24,7 +39,8 @@ function StatCounter({ target, suffix, label }: { target: number; suffix: string
   return (
     <div className="flex flex-col items-center">
       <span ref={ref} className="font-display text-5xl font-bold gradient-text">
-        {display}{suffix}
+        {display}
+        {suffix}
       </span>
       <span className="mt-2 text-xs uppercase tracking-[0.1em] text-[#8A8A8A]">
         {label}
@@ -36,31 +52,31 @@ function StatCounter({ target, suffix, label }: { target: number; suffix: string
 const careerGoals = [
   {
     icon: Server,
-    title: 'Backend Development',
-    desc: 'Building robust APIs and scalable server-side systems with Django and PostgreSQL',
+    title: "Backend Development",
+    desc: "Building robust APIs and scalable server-side systems with Django and PostgreSQL",
   },
   {
     icon: Cloud,
-    title: 'Cloud & AWS',
-    desc: 'Building and managing applications on AWS with hands-on experience in EC2, S3, and RDS',
+    title: "Cloud & AWS",
+    desc: "Building and managing applications on AWS with hands-on experience in EC2, S3, and RDS",
   },
-  { 
+  {
     icon: Target,
-    title: 'DevOps & Automation',
-    desc: 'Automating deployments with Docker, CI/CD pipelines, and infrastructure best practices',
+    title: "DevOps & Automation",
+    desc: "Automating deployments with Docker, CI/CD pipelines, and infrastructure best practices",
   },
 ];
 
 const aboutCards = [
   {
     icon: Code2,
-    title: 'Backend Development',
-    desc: 'Built full-stack Django applications with REST APIs, authentication, database management, and cloud integrations.',
+    title: "Backend Development",
+    desc: "Built full-stack Django applications with REST APIs, authentication, database management, and cloud integrations.",
   },
   {
     icon: BookOpen,
-    title: 'Continuous Learning',
-    desc: 'Actively expanding cloud and DevOps skills through AWS labs, Docker projects, and real-world deployments.',
+    title: "Continuous Learning",
+    desc: "Actively expanding cloud and DevOps skills through AWS labs, Docker projects, and real-world deployments.",
   },
 ];
 
@@ -68,32 +84,31 @@ export function AboutSection() {
   return (
     <section id="about" className="w-full bg-dark-card py-16 md:py-32">
       <div className="max-w-[1200px] mx-auto px-6">
-        <SectionHeader
-          label="ABOUT ME"
-          heading="About Me"
-          align="center"
-        />
+        <SectionHeader label="ABOUT ME" heading="About Me" align="center" />
 
         {/* Professional Summary */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
+          viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mt-12 max-w-[750px] mx-auto"
         >
           <p className="text-lg text-[#8A8A8A] text-center leading-relaxed">
-            I am a Computer Science Engineering student passionate about backend development 
-            and building practical software solutions. Over the past two years, 
-            I have worked extensively with Python and Django, developing full-stack applications such as
-             a school management system with role-based authentication and 
-             a notes-sharing platform with PDF management and cloud storage integration.
+            I am a Computer Science Engineering student passionate about backend
+            development and building practical software solutions. Over the past
+            two years, I have worked extensively with Python and Django,
+            developing full-stack applications such as a school management
+            system with role-based authentication and a notes-sharing platform
+            with PDF management and cloud storage integration.
           </p>
           <p className="mt-4 text-lg text-[#8A8A8A] text-center leading-relaxed">
-            Currently, I am expanding my skills in cloud computing and DevOps. 
-            I am learning AWS services like EC2, S3, RDS, and IAM, working with Docker for containerization, 
-            and exploring CI/CD automation with GitHub Actions. I enjoy writing clean, maintainable code and 
-            continuously learning new technologies that help me build better software.
+            Currently, I am expanding my skills in cloud computing and DevOps. I
+            am learning AWS services like EC2, S3, RDS, and IAM, working with
+            Docker for containerization, and exploring CI/CD automation with
+            GitHub Actions. I enjoy writing clean, maintainable code and
+            continuously learning new technologies that help me build better
+            software.
           </p>
         </motion.div>
 
@@ -101,7 +116,7 @@ export function AboutSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
+          viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[700px] mx-auto"
         >
@@ -115,8 +130,47 @@ export function AboutSection() {
               className="bg-dark-elevated rounded-2xl border border-white/[0.06] p-6 hover:border-amber/20 transition-all duration-300"
             >
               <card.icon size={22} className="text-amber" />
-              <h4 className="mt-3 text-base font-semibold text-white">{card.title}</h4>
-              <p className="mt-1 text-xs text-[#8A8A8A] leading-relaxed">{card.desc}</p>
+              <h4 className="mt-3 text-base font-semibold text-white">
+                {card.title}
+              </h4>
+              <p className="mt-1 text-xs text-[#8A8A8A] leading-relaxed">
+                {card.desc}
+              </p>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Focus Areas */}
+        <div className="mt-10 text-center">
+          <h3 className="text-2xl font-semibold text-white">Areas of Focus</h3>
+          <p className="mt-2 text-[#8A8A8A]">
+            Technologies and domains I am currently working with and exploring.
+          </p>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 max-w-[700px] mx-auto"
+        >
+          {careerGoals.map((goal, i) => (
+            <motion.div
+              key={goal.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.55 + i * 0.1 }}
+              className="bg-dark-elevated rounded-2xl border border-white/[0.06] p-6 hover:border-amber/20 transition-all duration-300"
+            >
+              <goal.icon size={22} className="text-amber" />
+              <h4 className="mt-3 text-base font-semibold text-white">
+                {goal.title}
+              </h4>
+              <p className="mt-1 text-xs text-[#8A8A8A] leading-relaxed">
+                {goal.desc}
+              </p>
             </motion.div>
           ))}
         </motion.div>
@@ -125,7 +179,7 @@ export function AboutSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
+          viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-8 bg-dark-elevated rounded-2xl border border-white/[0.06] p-8 max-w-[700px] mx-auto hover:border-amber/20 transition-all duration-300"
         >
@@ -143,30 +197,6 @@ export function AboutSection() {
               </span>
             </div>
           </div>
-        </motion.div>
-
-        {/* Career Goals */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 max-w-[700px] mx-auto"
-        >
-          {careerGoals.map((goal, i) => (
-            <motion.div
-              key={goal.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.55 + i * 0.1 }}
-              className="bg-dark-elevated rounded-2xl border border-white/[0.06] p-6 hover:border-amber/20 transition-all duration-300"
-            >
-              <goal.icon size={22} className="text-amber" />
-              <h4 className="mt-3 text-base font-semibold text-white">{goal.title}</h4>
-              <p className="mt-1 text-xs text-[#8A8A8A] leading-relaxed">{goal.desc}</p>
-            </motion.div>
-          ))}
         </motion.div>
 
         {/* Animated Statistics */}
