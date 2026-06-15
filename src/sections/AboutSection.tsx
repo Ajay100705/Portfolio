@@ -36,17 +36,17 @@ function StatCounter({ target, suffix, label }: { target: number; suffix: string
 const careerGoals = [
   {
     icon: Server,
-    title: 'Backend Engineering',
+    title: 'Backend Development',
     desc: 'Building robust APIs and scalable server-side systems with Django and PostgreSQL',
   },
   {
     icon: Cloud,
-    title: 'Cloud Computing',
-    desc: 'Deploying and managing applications on AWS with hands-on experience in EC2, S3, and RDS',
+    title: 'Cloud & AWS',
+    desc: 'Building and managing applications on AWS with hands-on experience in EC2, S3, and RDS',
   },
-  {
+  { 
     icon: Target,
-    title: 'DevOps Engineering',
+    title: 'DevOps & Automation',
     desc: 'Automating deployments with Docker, CI/CD pipelines, and infrastructure best practices',
   },
 ];
@@ -55,7 +55,7 @@ const aboutCards = [
   {
     icon: Code2,
     title: 'Backend Development',
-    desc: 'Built multiple production-grade Django applications with REST APIs, authentication, and database management.',
+    desc: 'Built full-stack Django applications with REST APIs, authentication, database management, and cloud integrations.',
   },
   {
     icon: BookOpen,
@@ -139,7 +139,7 @@ export function AboutSection() {
                 Bachelor of Technology (Computer Science Engineering)
               </p>
               <span className="inline-block mt-3 text-xs text-amber bg-amber/15 px-3 py-1 rounded-pill">
-                2023 — 2027
+                Expected Graduation: 2027
               </span>
             </div>
           </div>
@@ -171,10 +171,10 @@ export function AboutSection() {
 
         {/* Animated Statistics */}
         <div className="mt-16 flex flex-wrap justify-center gap-12 md:gap-16">
-          <StatCounter target={19} suffix="+" label="Repositories" />
+          <StatCounter target={19} suffix="+" label="GitHub Repositories" />
           <StatCounter target={15} suffix="+" label="Technologies" />
           <StatCounter target={4} suffix="+" label="Certifications" />
-          <StatCounter target={2} suffix="+" label="Years Coding" />
+          <StatCounter target={2} suffix="+" label="Years Building Projects" />
         </div>
       </div>
     </section>
