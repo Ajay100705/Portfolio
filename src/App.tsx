@@ -8,7 +8,6 @@ import { ProjectsSection } from '@/sections/ProjectsSection';
 import { ExperienceSection } from '@/sections/ExperienceSection';
 import { CertificationsSection } from '@/sections/CertificationsSection';
 import { GitHubStatsSection } from '@/sections/GitHubStatsSection';
-import { ResumeSection } from '@/sections/ResumeSection';
 import { ContactSection } from '@/sections/ContactSection';
 
 export default function App() {
@@ -23,7 +22,6 @@ export default function App() {
         <ExperienceSection />
         <CertificationsSection />
         <GitHubStatsSection />
-        <ResumeSection />
         <ContactSection />
       </main>
       <Footer />

@@ -12,7 +12,6 @@ const navLinks = [
   { label: 'Experience', href: '#experience' },
   { label: 'Certifications', href: '#certifications' },
   { label: 'GitHub', href: '#github' },
-  { label: 'Resume', href: '#resume' },
   { label: 'Contact', href: '#contact' },
 ];
 
