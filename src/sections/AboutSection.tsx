@@ -83,14 +83,17 @@ export function AboutSection() {
           className="mt-12 max-w-[750px] mx-auto"
         >
           <p className="text-lg text-[#8A8A8A] text-center leading-relaxed">
-            I am a Computer Science Engineering student with a deep focus on backend development using Python and Django.
-            Over the past two years, I've built several full-stack applications — from a school management system
-            with role-based authentication to a note-sharing platform with PDF handling and Cloudinary integration.
+            I am a Computer Science Engineering student passionate about backend development 
+            and building practical software solutions. Over the past two years, 
+            I have worked extensively with Python and Django, developing full-stack applications such as
+             a school management system with role-based authentication and 
+             a notes-sharing platform with PDF management and cloud storage integration.
           </p>
           <p className="mt-4 text-lg text-[#8A8A8A] text-center leading-relaxed">
-            Currently, I am expanding into cloud infrastructure and DevOps. I am working with Docker for containerization,
-            learning AWS core services (EC2, S3, RDS, IAM), and building CI/CD pipelines with GitHub Actions.
-            I care about writing clean, well-tested code and automating repetitive deployment work.
+            Currently, I am expanding my skills in cloud computing and DevOps. 
+            I am learning AWS services like EC2, S3, RDS, and IAM, working with Docker for containerization, 
+            and exploring CI/CD automation with GitHub Actions. I enjoy writing clean, maintainable code and 
+            continuously learning new technologies that help me build better software.
           </p>
         </motion.div>
 
